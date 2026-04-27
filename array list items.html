@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Array Items</title>
+</head>
+<body>
+
+<h2>My Items List</h2>
+
+<!-- Button -->
+<button onclick="showItems()">Show Items</button>
+
+<!-- Output -->
+<p id="result"></p>
+
+<script>
+function showItems() {
+    // Create an array
+    let items = ["Apple", "Mango", "Banana", "Grape"];
+
+    // Display items
+    document.getElementById("result").innerHTML = items.join(", ");
+}
+</script>
+
+</body>
+</html>
