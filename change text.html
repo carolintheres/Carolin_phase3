@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Text Dynamically</title>
+</head>
+<body>
+
+<h2 id="text">Hello!</h2>
+
+<!-- Button -->
+<button onclick="changeText()">Click Me</button>
+
+<script>
+function changeText() {
+    // Select the element
+    let element = document.getElementById("text");
+
+    // Change the text
+    element.innerHTML = "Text Changed Successfully!";
+}
+</script>
+
+</body>
+</html>
