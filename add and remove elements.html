@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add and Remove Elements</title>
+</head>
+<body>
+
+<h2>My List</h2>
+
+<!-- Empty list -->
+<ul id="myList"></ul>
+
+<!-- Buttons -->
+<button onclick="addItem()">Add Item</button>
+<button onclick="removeItem()">Remove Item</button>
+
+<script>
+function addItem() {
+
+    // Create new list item
+    let li = document.createElement("li");
+
+    // Add text
+    li.innerHTML = "Chocolate";
+
+    // Add item to the list
+    document.getElementById("myList").appendChild(li);
+}
+
+function removeItem() {
+
+    // Select the list
+    let list = document.getElementById("myList");
+
+    // Remove last item
+    list.removeChild(list.lastElementChild);
+}
+</script>
+
+</body>
+</html>
