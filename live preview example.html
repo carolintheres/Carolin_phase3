@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Preview Example</title>
+</head>
+<body>
+
+    <h2>Type Something</h2>
+
+    <input type="text" id="userInput" onkeyup="showText()">
+
+    <h3>Live Preview:</h3>
+    <p id="preview"></p>
+
+    <script>
+        function showText() {
+            let text = document.getElementById("userInput").value;
+            document.getElementById("preview").innerHTML = text;
+        }
+    </script>
+
+</body>
+</html>

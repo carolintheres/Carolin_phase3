@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation Example</title>
+</head>
+<body>
+
+    <h2>Simple Form</h2>
+
+    <form onsubmit="validateForm(event)">
+
+        <!-- Name Input -->
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <!-- Message -->
+    <p id="message"></p>
+
+    <script>
+        function validateForm(event) {
+
+            // Prevent form from refreshing
+            event.preventDefault();
+
+            // Get input value
+            let name = document.getElementById("name").value;
+
+            // Validation
+            if (name === "") {
+                document.getElementById("message").innerHTML =
+                    "Please enter your name";
+            } else {
+                document.getElementById("message").innerHTML =
+                    "Form submitted successfully";
+            }
+        }
+    </script>
+
+</body>
+</html>

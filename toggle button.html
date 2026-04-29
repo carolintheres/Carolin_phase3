@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toggle Button</title>
+  <h1>Toggle Button</h1>
+
+  <style>
+    #toggleBtn {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      background-color: gray;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button id="toggleBtn">OFF</button>
+
+  <script>
+    const btn = document.getElementById("toggleBtn");
+
+    let isOn = false;
+
+    btn.addEventListener("click", () => {
+
+      isOn = !isOn;
+
+      if (isOn) {
+        btn.textContent = "ON";
+        btn.style.backgroundColor = "green";
+      } else {
+        btn.textContent = "OFF";
+        btn.style.backgroundColor = "gray";
+      }
+
+    });
+  </script>
+
+</body>
+</html>

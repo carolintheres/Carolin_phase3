@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form Validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Login Form</h2>
+
+    <form onsubmit="validateLogin(event)">
+
+        <!-- Username -->
+        <input type="text" id="username" placeholder="Enter Username">
+        <p id="userError" class="error"></p>
+
+        <!-- Password -->
+        <input type="password" id="password" placeholder="Enter Password">
+        <p id="passError" class="error"></p>
+
+        <button type="submit">Login</button>
+
+    </form>
+
+    <script>
+
+        function validateLogin(event) {
+
+            // Prevent page refresh
+            event.preventDefault();
+
+            // Get values
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            // Error elements
+            let userError = document.getElementById("userError");
+            let passError = document.getElementById("passError");
+
+            // Clear old messages
+            userError.innerHTML = "";
+            passError.innerHTML = "";
+
+            // Username validation
+            if (username === "") {
+                userError.innerHTML = "Username is required";
+            }
+            else if (username.length < 4) {
+                userError.innerHTML = "Username must be at least 4 characters";
+            }
+
+            // Password validation
+            if (password === "") {
+                passError.innerHTML = "Password is required";
+            }
+            else if (password.length < 6) {
+                passError.innerHTML = "Password must be at least 6 characters";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
